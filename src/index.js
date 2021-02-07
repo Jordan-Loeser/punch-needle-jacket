@@ -1,12 +1,29 @@
-import freesewing from '@freesewing/core'
-import plugins from '@freesewing/plugin-bundle'
-import config from '../config'
-import draftBox from './box'
+import freesewing from "@freesewing/core";
+import plugins from "@freesewing/plugin-bundle";
+import Bent from "@freesewing/bent";
+import config from "../config";
+// Parts
+import draftBox from "./box";
+import draftFront from "./front";
 
 // Create new design
-const Pattern = new freesewing.Design(config, plugins)
+const Jordan = new freesewing.Design(config, plugins);
+
+// Attach draft methods from Bent to prototype
+for (let m of [
+  "draftBase",
+  "draftFront",
+  "draftBack",
+  "draftSleeve",
+  "draftTopSleeve",
+  "draftUnderSleeve",
+]) {
+  Jordan.prototype[m] = function (part) {
+    return new Bent(this.settings)[m](part);
+  };
+}
 
 // Attach the draft methods to the prototype
-Pattern.prototype.draftBox = draftBox
+Jordan.prototype.draftBox = draftBox;
 
-export default Pattern
+export default Jordan;

@@ -1081,6 +1081,14 @@
   dependencies:
     emojis-list "^3.0.0"
 
+"@freesewing/bent@^2.12.1":
+  version "2.12.1"
+  resolved "https://registry.yarnpkg.com/@freesewing/bent/-/bent-2.12.1.tgz#ed10d6a8861cb6641a01d64bd08f94abd3015276"
+
+"@freesewing/brian@^2.12.1":
+  version "2.12.1"
+  resolved "https://registry.yarnpkg.com/@freesewing/brian/-/brian-2.12.1.tgz#7ce1b92756947fee18f6a744856000aea8e9ffb8"
+
 "@freesewing/components@latest":
   version "2.12.1"
   resolved "https://registry.yarnpkg.com/@freesewing/components/-/components-2.12.1.tgz#190df8cc56f9824cfc5479b095f3e07aee164c59"
@@ -4143,7 +4151,7 @@ eslint@^6.6.0:
     text-table "^0.2.0"
     v8-compile-cache "^2.0.3"
 
-eslint@^7.6.0:
+eslint@^7.19.0:
   version "7.19.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.19.0.tgz#6719621b196b5fad72e43387981314e5d0dc3f41"
   dependencies:
