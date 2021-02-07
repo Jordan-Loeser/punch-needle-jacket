@@ -45,18 +45,18 @@ export default {
     "wrist",
   ],
   dependencies: {
-    back: "base",
-    front: "back",
-    topSleeve: "sleeve",
-    underSleeve: "sleeve",
+    bentBack: "bentBase",
+    bentFront: "bentBack",
+    bentTopSleeve: "bentSleeve",
+    bentUnderSleeve: "bentSleeve",
   },
   inject: {
-    back: "base",
-    front: "back",
-    topSleeve: "sleeve",
-    underSleeve: "sleeve",
+    bentBack: "bentBase",
+    bentFront: "bentBack",
+    bentTopSleeve: "bentSleeve",
+    bentUnderSleeve: "bentSleeve",
   },
-  hide: ["base", "sleeve"],
+  hide: ["bentBase", "bentSleeve"],
   options: {
     // Constants
     brianFitSleeve: true,

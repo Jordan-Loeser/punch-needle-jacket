@@ -11,17 +11,19 @@ const Jordan = new freesewing.Design(config, plugins);
 
 // Attach draft methods from Bent to prototype
 for (let m of [
-  "draftBase",
-  "draftFront",
-  "draftBack",
-  "draftSleeve",
-  "draftTopSleeve",
-  "draftUnderSleeve",
+  ["draftBase", "draftBentBase"],
+  ["draftFront", "draftBentFront"],
+  ["draftBack", "draftBentBack"],
+  ["draftSleeve", "draftBentSleeve"],
+  ["draftTopSleeve", "draftBentTopSleeve"],
+  ["draftUnderSleeve", "draftBentUnderSleeve"],
 ]) {
-  Jordan.prototype[m] = function (part) {
-    return new Bent(this.settings)[m](part);
+  Jordan.prototype[m[1]] = function (part) {
+    return new Bent(this.settings)[m[0]](part);
   };
 }
+
+console.log(Jordan.prototype);
 
 // Attach the draft methods to the prototype
 Jordan.prototype.draftBox = draftBox;
