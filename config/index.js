@@ -21,11 +21,8 @@ export default {
       "lengthBonus",
       "sleeveLengthBonus",
       "sleeveBend",
-      "ribbingStretch",
     ],
     style: [
-      "ribbing",
-      "ribbingHeight",
       "acrossBackFactor",
       "armholeDepthFactor",
       "backNeckCutout",
@@ -60,6 +57,7 @@ export default {
     bentFront: "bentBack",
     bentTopSleeve: "bentSleeve",
     bentUnderSleeve: "bentSleeve",
+    // Bent Front === Brian FrontBase === Huey Front === Jordan Front
     front: "bentFront",
   },
   hide: ["bentBase", "bentSleeve", "bentTopSleeve", "bentUnderSleeve"],
@@ -88,10 +86,6 @@ export default {
     sleeveLengthBonus: { pct: 0, min: -20, max: 15 },
 
     // Options specific to Jordan
-    ribbing: { bool: true },
-
-    ribbingHeight: { pct: 10, min: 5, max: 15 },
-    ribbingStretch: { pct: 15, min: 0, max: 30 },
     hipsEase: { pct: 8, min: 4, max: 12 },
   },
 };
