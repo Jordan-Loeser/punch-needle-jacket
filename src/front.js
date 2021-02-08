@@ -18,12 +18,6 @@ export default function (part) {
   // Clear paths from Brian
   for (let p of Object.keys(paths)) delete paths[p];
 
-  // Shorten body to take ribbing into account
-  if (options.ribbing) {
-    for (let p of ["hem", "cfHem"])
-      points[p] = points[p].shift(90, store.get("ribbingHeight"));
-  }
-
   // Shape side seam
   points.hips.x = (measurements.hips * (1 + options.hipsEase)) / 4;
   points.hem.x = points.hips.x;

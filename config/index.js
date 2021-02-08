@@ -23,7 +23,7 @@ export default {
       "sleeveBend",
       "ribbingStretch",
     ],
-    other: [
+    style: [
       "ribbing",
       "ribbingHeight",
       "acrossBackFactor",
@@ -33,6 +33,7 @@ export default {
       "shoulderSlopeReduction",
       "sleevecapHeight",
       "sleevecapEase",
+      "hipsEase",
     ],
   },
   measurements: [
@@ -88,7 +89,9 @@ export default {
 
     // Options specific to Jordan
     ribbing: { bool: true },
+
     ribbingHeight: { pct: 10, min: 5, max: 15 },
     ribbingStretch: { pct: 15, min: 0, max: 30 },
+    hipsEase: { pct: 8, min: 4, max: 12 },
   },
 };
