@@ -1,6 +1,5 @@
-// import { sharedDimensions } from "./shared";
+// import { sharedDimensions } from './shared'
 
-// Modified from front of Huey
 export default function (part) {
   let {
     utils,
@@ -78,40 +77,39 @@ export default function (part) {
     .move(points.cfHem)
     .line(points.hem)
     .attr("class", "note stroke-xxl");
-  paths.saBase.render = false;
-  paths.hemBase.render = false;
+  // paths.saBase.render = false;
+  // paths.hemBase.render = false;
 
-  paths.seam = paths.saBase
-    .clone()
-    .join(paths.hemBase)
-    .close()
-    .attr("class", "fabric");
+  // paths.seam = paths.saBase
+  //   .clone()
+  //   .join(paths.hemBase)
+  //   .close()
+  //   .attr("class", "fabric");
 
-  // Complete?
-  if (complete) {
-    // TODO: Add front pocket from onlinee
-    // if (options.pocket) {
-    //   paths.pocket = new Path()
-    //     .move(points.pocketHem)
-    //     .line(points.pocketTip)
-    //     .curve_(points.pocketTipCp2, points.pocketTopRight)
-    //     .line(points.pocketCfTop)
-    //     .attr("class", "fabric dashed stroke-sm");
-    // }
+  // // Complete?
+  // if (complete) {
+  //   if (options.pocket) {
+  //     paths.pocket = new Path()
+  //       .move(points.pocketHem)
+  //       .line(points.pocketTip)
+  //       .curve_(points.pocketTipCp2, points.pocketTopRight)
+  //       .line(points.pocketCfTop)
+  //       .attr("class", "fabric dashed stroke-sm");
+  //   }
 
-    if (sa) {
-      paths.sa = paths.hemBase
-        .offset(options.ribbing ? sa : 3 * sa)
-        .join(paths.saBase.offset(sa));
-      paths.sa = paths.sa
-        .line(paths.sa.start())
-        .close()
-        .attr("class", "fabric sa");
-    }
-  }
+  //   if (sa) {
+  //     paths.sa = paths.hemBase
+  //       .offset(options.ribbing ? sa : 3 * sa)
+  //       .join(paths.saBase.offset(sa));
+  //     paths.sa = paths.sa
+  //       .line(paths.sa.start())
+  //       .close()
+  //       .attr("class", "fabric sa");
+  //   }
+  // }
 
-  // Paperless?
-  // if (paperless) sharedDimensions(part, "front");
+  // // Paperless?
+  // if (paperless) sharedDimensions(part, 'front')
 
   return part;
 }

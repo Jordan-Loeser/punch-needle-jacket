@@ -23,9 +23,8 @@ for (let m of [
   };
 }
 
-console.log(Jordan.prototype);
-
 // Attach the draft methods to the prototype
 Jordan.prototype.draftBox = draftBox;
+Jordan.prototype.draftFront = draftFront;
 
 export default Jordan;

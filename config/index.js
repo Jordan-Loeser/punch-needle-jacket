@@ -21,8 +21,11 @@ export default {
       "lengthBonus",
       "sleeveLengthBonus",
       "sleeveBend",
+      "ribbingStretch",
     ],
-    advanced: [
+    other: [
+      "ribbing",
+      "ribbingHeight",
       "acrossBackFactor",
       "armholeDepthFactor",
       "backNeckCutout",
@@ -35,11 +38,11 @@ export default {
   measurements: [
     "biceps",
     "chest",
+    "hips",
     "hpsToWaistBack",
     "waistToHips",
     "neck",
     "shoulderSlope",
-    "shoulderToElbow",
     "shoulderToShoulder",
     "shoulderToWrist",
     "wrist",
@@ -49,14 +52,16 @@ export default {
     bentFront: "bentBack",
     bentTopSleeve: "bentSleeve",
     bentUnderSleeve: "bentSleeve",
+    front: "bentFront",
   },
   inject: {
     bentBack: "bentBase",
     bentFront: "bentBack",
     bentTopSleeve: "bentSleeve",
     bentUnderSleeve: "bentSleeve",
+    front: "bentFront",
   },
-  hide: ["bentBase", "bentSleeve"],
+  hide: ["bentBase", "bentSleeve", "bentTopSleeve", "bentUnderSleeve"],
   options: {
     // Constants
     brianFitSleeve: true,
@@ -80,5 +85,10 @@ export default {
     sleevecapHeight: { pct: 45, min: 40, max: 60 },
     sleevecapEase: { pct: 1, min: 0, max: 10 },
     sleeveLengthBonus: { pct: 0, min: -20, max: 15 },
+
+    // Options specific to Jordan
+    ribbing: { bool: true },
+    ribbingHeight: { pct: 10, min: 5, max: 15 },
+    ribbingStretch: { pct: 15, min: 0, max: 30 },
   },
 };
